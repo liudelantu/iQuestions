@@ -1,0 +1,22 @@
+# 依赖
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# 构建产物
+frontend/dist/
+
+# 本地数据库（SQLite 文件，如需备份请自行复制 data/ 目录）
+data/*.db
+data/*.db-journal
+data/*.db-wal
+data/*.db-shm
+
+# 编辑器 / 系统
+.DS_Store
+.idea/
+.vscode/
+*.log
