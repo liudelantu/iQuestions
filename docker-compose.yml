@@ -1,0 +1,22 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      # SQLite 数据库文件落在宿主机项目目录 data/ 下，便于备份
+      - ./data:/app/data
+    environment:
+      IQUESTIONS_DB_PATH: /app/data/iquestions.db
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_PROXY_TARGET: http://backend:8000
+    depends_on:
+      - backend

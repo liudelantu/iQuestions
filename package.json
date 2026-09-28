@@ -1,0 +1,19 @@
+{
+  "name": "iquestions",
+  "version": "0.1.0",
+  "private": true,
+  "description": "本地单用户刷题系统：React + Vite + TypeScript + Tailwind / FastAPI / SQLite",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "postinstall": "node scripts/run.mjs setup",
+    "setup": "node scripts/run.mjs setup",
+    "dev": "node scripts/run.mjs dev",
+    "test": "node scripts/run.mjs test",
+    "seed": "node scripts/run.mjs seed",
+    "test:backend": "cd backend && python3 -m pytest -q",
+    "build:frontend": "npm --prefix frontend run build"
+  }
+}
