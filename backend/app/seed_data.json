@@ -1,0 +1,448 @@
+[
+  {
+    "source_id": "py-001",
+    "type": "single",
+    "title": "在 Python 中，下列哪种数据类型是不可变（immutable）的？",
+    "options": [
+      { "content": "list", "is_correct": false },
+      { "content": "dict", "is_correct": false },
+      { "content": "tuple", "is_correct": true },
+      { "content": "set", "is_correct": false }
+    ],
+    "explanation": "tuple 一旦创建就不能修改其元素；list、dict、set 都是可变类型。",
+    "difficulty": "easy",
+    "category": "Python 基础",
+    "tags": ["数据类型", "基础"]
+  },
+  {
+    "source_id": "py-002",
+    "type": "single",
+    "title": "执行 `print(type(3 / 2))` 的输出是什么？",
+    "options": [
+      { "content": "<class 'int'>", "is_correct": false },
+      { "content": "<class 'float'>", "is_correct": true },
+      { "content": "<class 'decimal'>", "is_correct": false },
+      { "content": "报错", "is_correct": false }
+    ],
+    "explanation": "Python 3 中 `/` 始终返回浮点数，整除应使用 `//`。",
+    "difficulty": "easy",
+    "category": "Python 基础",
+    "tags": ["运算符", "基础"]
+  },
+  {
+    "source_id": "py-003",
+    "type": "multiple",
+    "title": "下列关于 Python 列表推导式的说法，正确的有哪些？",
+    "options": [
+      { "content": "可以包含 if 条件过滤元素", "is_correct": true },
+      { "content": "可以嵌套多个 for 子句", "is_correct": true },
+      { "content": "执行速度通常比等价的 for 循环 + append 更慢", "is_correct": false },
+      { "content": "结果一定是一个列表", "is_correct": true }
+    ],
+    "explanation": "列表推导式支持条件过滤与多重循环，且通常比显式循环更快；结果总是列表（生成器表达式使用圆括号）。",
+    "difficulty": "medium",
+    "category": "Python 基础",
+    "tags": ["推导式"]
+  },
+  {
+    "source_id": "py-004",
+    "type": "true_false",
+    "title": "Python 中的字典（dict）从 3.7 版本开始保证按插入顺序迭代。",
+    "options": [
+      { "content": "正确", "is_correct": true },
+      { "content": "错误", "is_correct": false }
+    ],
+    "explanation": "自 Python 3.7 起，dict 保持插入顺序成为语言规范的一部分。",
+    "difficulty": "medium",
+    "category": "Python 基础",
+    "tags": ["数据类型", "dict"]
+  },
+  {
+    "source_id": "py-005",
+    "type": "fill_blank",
+    "title": "Python 中用于定义匿名函数的关键字是 ____。",
+    "fill_answers": [["lambda"]],
+    "explanation": "lambda 表达式用于创建匿名函数，例如 `lambda x: x * 2`。",
+    "difficulty": "easy",
+    "category": "Python 基础",
+    "tags": ["函数", "基础"]
+  },
+  {
+    "source_id": "py-006",
+    "type": "fill_blank",
+    "title": "表达式 `len(\"hello\")` 的值是 ____，`\"hello\"[1]` 的值是 ____。",
+    "fill_answers": [["5", "五"], ["e", "'e'", "\"e\""]],
+    "explanation": "字符串长度为 5；索引从 0 开始，索引 1 对应字符 e。",
+    "difficulty": "easy",
+    "category": "Python 基础",
+    "tags": ["字符串", "基础"]
+  },
+  {
+    "source_id": "py-007",
+    "type": "single",
+    "title": "下列哪个语句可以正确捕获所有异常并获取异常对象？",
+    "options": [
+      { "content": "except Exception as e:", "is_correct": true },
+      { "content": "except Exception, e:", "is_correct": false },
+      { "content": "catch (Exception e):", "is_correct": false },
+      { "content": "except e:", "is_correct": false }
+    ],
+    "explanation": "Python 3 使用 `except 类型 as 变量:` 语法；`except Exception, e` 是 Python 2 的写法。",
+    "difficulty": "easy",
+    "category": "Python 基础",
+    "tags": ["异常处理"]
+  },
+  {
+    "source_id": "py-008",
+    "type": "true_false",
+    "title": "在 Python 中，函数的默认参数值在每次调用时都会重新计算。",
+    "options": [
+      { "content": "正确", "is_correct": false },
+      { "content": "错误", "is_correct": true }
+    ],
+    "explanation": "默认参数只在函数定义时求值一次，因此使用可变对象（如 list）作为默认值会在多次调用间共享。",
+    "difficulty": "hard",
+    "category": "Python 基础",
+    "tags": ["函数", "陷阱"]
+  },
+  {
+    "source_id": "ds-001",
+    "type": "single",
+    "title": "在一个长度为 n 的有序数组中进行二分查找，最坏情况下的时间复杂度是？",
+    "options": [
+      { "content": "O(1)", "is_correct": false },
+      { "content": "O(log n)", "is_correct": true },
+      { "content": "O(n)", "is_correct": false },
+      { "content": "O(n log n)", "is_correct": false }
+    ],
+    "explanation": "每次比较将搜索区间缩小一半，最多需要 log₂n 次比较。",
+    "difficulty": "easy",
+    "category": "数据结构与算法",
+    "tags": ["查找", "复杂度"]
+  },
+  {
+    "source_id": "ds-002",
+    "type": "single",
+    "title": "下列排序算法中，哪一个在平均情况下时间复杂度为 O(n log n) 且是稳定的？",
+    "options": [
+      { "content": "快速排序", "is_correct": false },
+      { "content": "堆排序", "is_correct": false },
+      { "content": "归并排序", "is_correct": true },
+      { "content": "选择排序", "is_correct": false }
+    ],
+    "explanation": "归并排序平均、最坏均为 O(n log n) 且稳定；快速排序和堆排序不稳定；选择排序为 O(n²)。",
+    "difficulty": "medium",
+    "category": "数据结构与算法",
+    "tags": ["排序", "复杂度"]
+  },
+  {
+    "source_id": "ds-003",
+    "type": "multiple",
+    "title": "下列哪些数据结构遵循“后进先出”（LIFO）或可用于实现 LIFO 语义？",
+    "options": [
+      { "content": "栈（Stack）", "is_correct": true },
+      { "content": "队列（Queue）", "is_correct": false },
+      { "content": "Python 的 list（使用 append / pop）", "is_correct": true },
+      { "content": "哈希表", "is_correct": false }
+    ],
+    "explanation": "栈是典型的 LIFO 结构；Python list 的 append 与 pop 组合即可实现栈；队列是 FIFO。",
+    "difficulty": "easy",
+    "category": "数据结构与算法",
+    "tags": ["栈", "队列"]
+  },
+  {
+    "source_id": "ds-004",
+    "type": "true_false",
+    "title": "哈希表在理想情况下的查找、插入、删除操作平均时间复杂度均为 O(1)。",
+    "options": [
+      { "content": "正确", "is_correct": true },
+      { "content": "错误", "is_correct": false }
+    ],
+    "explanation": "在哈希函数分布均匀、负载因子合理的情况下，哈希表的基本操作平均为 O(1)。",
+    "difficulty": "easy",
+    "category": "数据结构与算法",
+    "tags": ["哈希表", "复杂度"]
+  },
+  {
+    "source_id": "ds-005",
+    "type": "fill_blank",
+    "title": "一棵包含 n 个节点的完全二叉树，其高度（根节点高度记为 1）约为 ____（用大 O 记号表示）。",
+    "fill_answers": [["O(log n)", "O(logn)", "log n", "logn", "O(log₂n)"]],
+    "explanation": "完全二叉树每层节点数翻倍，因此高度为 ⌊log₂n⌋ + 1，即 O(log n)。",
+    "difficulty": "medium",
+    "category": "数据结构与算法",
+    "tags": ["树", "复杂度"]
+  },
+  {
+    "source_id": "ds-006",
+    "type": "single",
+    "title": "使用广度优先搜索（BFS）遍历图时，通常借助哪种数据结构？",
+    "options": [
+      { "content": "栈", "is_correct": false },
+      { "content": "队列", "is_correct": true },
+      { "content": "优先队列", "is_correct": false },
+      { "content": "链表", "is_correct": false }
+    ],
+    "explanation": "BFS 按层扩展节点，使用队列先进先出的特性维护待访问节点；DFS 常用栈或递归。",
+    "difficulty": "easy",
+    "category": "数据结构与算法",
+    "tags": ["图", "遍历"]
+  },
+  {
+    "source_id": "net-001",
+    "type": "single",
+    "title": "HTTP 状态码 404 表示什么含义？",
+    "options": [
+      { "content": "请求成功", "is_correct": false },
+      { "content": "服务器内部错误", "is_correct": false },
+      { "content": "资源未找到", "is_correct": true },
+      { "content": "未授权", "is_correct": false }
+    ],
+    "explanation": "4xx 为客户端错误，404 Not Found 表示请求的资源在服务器上不存在。",
+    "difficulty": "easy",
+    "category": "计算机网络",
+    "tags": ["HTTP", "状态码"]
+  },
+  {
+    "source_id": "net-002",
+    "type": "multiple",
+    "title": "下列哪些协议工作在传输层？",
+    "options": [
+      { "content": "TCP", "is_correct": true },
+      { "content": "UDP", "is_correct": true },
+      { "content": "IP", "is_correct": false },
+      { "content": "HTTP", "is_correct": false }
+    ],
+    "explanation": "TCP 与 UDP 属于传输层；IP 属于网络层；HTTP 属于应用层。",
+    "difficulty": "easy",
+    "category": "计算机网络",
+    "tags": ["协议", "OSI 模型"]
+  },
+  {
+    "source_id": "net-003",
+    "type": "true_false",
+    "title": "TCP 建立连接需要三次握手，断开连接需要四次挥手。",
+    "options": [
+      { "content": "正确", "is_correct": true },
+      { "content": "错误", "is_correct": false }
+    ],
+    "explanation": "三次握手（SYN、SYN+ACK、ACK）建立连接；四次挥手（FIN、ACK、FIN、ACK）断开连接。",
+    "difficulty": "easy",
+    "category": "计算机网络",
+    "tags": ["TCP"]
+  },
+  {
+    "source_id": "net-004",
+    "type": "fill_blank",
+    "title": "HTTPS 默认使用的端口号是 ____，HTTP 默认使用的端口号是 ____。",
+    "fill_answers": [["443"], ["80"]],
+    "explanation": "HTTP 默认 80 端口，HTTPS 默认 443 端口。",
+    "difficulty": "easy",
+    "category": "计算机网络",
+    "tags": ["HTTP", "端口"]
+  },
+  {
+    "source_id": "net-005",
+    "type": "single",
+    "title": "DNS 协议的主要作用是什么？",
+    "options": [
+      { "content": "为主机动态分配 IP 地址", "is_correct": false },
+      { "content": "将域名解析为 IP 地址", "is_correct": true },
+      { "content": "加密传输数据", "is_correct": false },
+      { "content": "传输电子邮件", "is_correct": false }
+    ],
+    "explanation": "DNS（域名系统）负责域名与 IP 地址之间的转换；动态分配 IP 是 DHCP 的职责。",
+    "difficulty": "easy",
+    "category": "计算机网络",
+    "tags": ["DNS", "协议"]
+  },
+  {
+    "source_id": "net-006",
+    "type": "multiple",
+    "title": "关于 UDP 协议，下列说法正确的有哪些？",
+    "options": [
+      { "content": "面向无连接", "is_correct": true },
+      { "content": "保证数据可靠有序到达", "is_correct": false },
+      { "content": "首部开销比 TCP 小", "is_correct": true },
+      { "content": "适合实时音视频等对时延敏感的场景", "is_correct": true }
+    ],
+    "explanation": "UDP 无连接、不保证可靠性、首部仅 8 字节，适合对实时性要求高而允许少量丢包的应用。",
+    "difficulty": "medium",
+    "category": "计算机网络",
+    "tags": ["UDP", "协议"]
+  },
+  {
+    "source_id": "db-001",
+    "type": "single",
+    "title": "SQL 中用于去除查询结果中重复行的关键字是？",
+    "options": [
+      { "content": "UNIQUE", "is_correct": false },
+      { "content": "DISTINCT", "is_correct": true },
+      { "content": "GROUP", "is_correct": false },
+      { "content": "ONLY", "is_correct": false }
+    ],
+    "explanation": "`SELECT DISTINCT 列名 FROM 表` 可去除重复行；UNIQUE 是约束关键字。",
+    "difficulty": "easy",
+    "category": "数据库",
+    "tags": ["SQL", "查询"]
+  },
+  {
+    "source_id": "db-002",
+    "type": "multiple",
+    "title": "数据库事务的 ACID 特性包括哪些？",
+    "options": [
+      { "content": "原子性（Atomicity）", "is_correct": true },
+      { "content": "一致性（Consistency）", "is_correct": true },
+      { "content": "隔离性（Isolation）", "is_correct": true },
+      { "content": "可用性（Availability）", "is_correct": false }
+    ],
+    "explanation": "ACID 指原子性、一致性、隔离性、持久性（Durability）；可用性属于 CAP 理论。",
+    "difficulty": "medium",
+    "category": "数据库",
+    "tags": ["事务", "ACID"]
+  },
+  {
+    "source_id": "db-003",
+    "type": "true_false",
+    "title": "在关系型数据库中，为字段建立索引一定会提升该表所有操作的性能。",
+    "options": [
+      { "content": "正确", "is_correct": false },
+      { "content": "错误", "is_correct": true }
+    ],
+    "explanation": "索引能加速查询，但会增加写入（INSERT / UPDATE / DELETE）的开销并占用额外存储空间。",
+    "difficulty": "medium",
+    "category": "数据库",
+    "tags": ["索引", "性能"]
+  },
+  {
+    "source_id": "db-004",
+    "type": "fill_blank",
+    "title": "SQL 中按某列对结果进行分组使用 ____ 子句，对分组后的结果进行过滤使用 ____ 子句。",
+    "fill_answers": [["GROUP BY", "group by"], ["HAVING", "having"]],
+    "explanation": "WHERE 在分组前过滤行，HAVING 在 GROUP BY 之后过滤分组。",
+    "difficulty": "medium",
+    "category": "数据库",
+    "tags": ["SQL", "分组"]
+  },
+  {
+    "source_id": "db-005",
+    "type": "single",
+    "title": "下列哪种 JOIN 会返回左表的全部记录，即使右表中没有匹配的行？",
+    "options": [
+      { "content": "INNER JOIN", "is_correct": false },
+      { "content": "LEFT JOIN", "is_correct": true },
+      { "content": "RIGHT JOIN", "is_correct": false },
+      { "content": "CROSS JOIN", "is_correct": false }
+    ],
+    "explanation": "LEFT (OUTER) JOIN 保留左表所有行，右表无匹配时以 NULL 填充。",
+    "difficulty": "easy",
+    "category": "数据库",
+    "tags": ["SQL", "JOIN"]
+  },
+  {
+    "source_id": "os-001",
+    "type": "single",
+    "title": "进程与线程的主要区别是什么？",
+    "options": [
+      { "content": "线程拥有独立的地址空间，进程共享地址空间", "is_correct": false },
+      { "content": "进程是资源分配的基本单位，线程是 CPU 调度的基本单位", "is_correct": true },
+      { "content": "进程只能在单核 CPU 上运行", "is_correct": false },
+      { "content": "线程之间无法通信", "is_correct": false }
+    ],
+    "explanation": "同一进程内的多个线程共享进程的地址空间与资源，线程是调度执行的最小单位。",
+    "difficulty": "medium",
+    "category": "操作系统",
+    "tags": ["进程", "线程"]
+  },
+  {
+    "source_id": "os-002",
+    "type": "multiple",
+    "title": "产生死锁的必要条件包括哪些？",
+    "options": [
+      { "content": "互斥条件", "is_correct": true },
+      { "content": "请求与保持条件", "is_correct": true },
+      { "content": "不可剥夺条件", "is_correct": true },
+      { "content": "循环等待条件", "is_correct": true }
+    ],
+    "explanation": "死锁的四个必要条件：互斥、请求与保持、不可剥夺、循环等待，破坏任意一个即可预防死锁。",
+    "difficulty": "hard",
+    "category": "操作系统",
+    "tags": ["死锁", "并发"]
+  },
+  {
+    "source_id": "os-003",
+    "type": "true_false",
+    "title": "虚拟内存技术使得程序可以使用比物理内存更大的地址空间。",
+    "options": [
+      { "content": "正确", "is_correct": true },
+      { "content": "错误", "is_correct": false }
+    ],
+    "explanation": "虚拟内存通过分页与换入换出机制，将部分不常用页面存放到磁盘，为程序提供比物理内存更大的逻辑地址空间。",
+    "difficulty": "easy",
+    "category": "操作系统",
+    "tags": ["内存管理"]
+  },
+  {
+    "source_id": "os-004",
+    "type": "fill_blank",
+    "title": "Linux 中查看当前目录下所有文件（包括隐藏文件）的详细信息，常用命令是 `ls ____`。",
+    "fill_answers": [["-la", "-al", "-l -a", "-a -l"]],
+    "explanation": "`-l` 显示详细信息，`-a` 显示以 . 开头的隐藏文件，二者可合并为 `-la`。",
+    "difficulty": "easy",
+    "category": "操作系统",
+    "tags": ["Linux", "命令行"]
+  },
+  {
+    "source_id": "fe-001",
+    "type": "single",
+    "title": "在 React 中，用于在函数组件里声明状态的 Hook 是？",
+    "options": [
+      { "content": "useEffect", "is_correct": false },
+      { "content": "useState", "is_correct": true },
+      { "content": "useMemo", "is_correct": false },
+      { "content": "useRef", "is_correct": false }
+    ],
+    "explanation": "useState 返回状态值与更新函数；useEffect 处理副作用；useMemo 缓存计算结果；useRef 保存可变引用。",
+    "difficulty": "easy",
+    "category": "前端开发",
+    "tags": ["React", "Hooks"]
+  },
+  {
+    "source_id": "fe-002",
+    "type": "multiple",
+    "title": "下列哪些是 JavaScript 中的原始（primitive）类型？",
+    "options": [
+      { "content": "string", "is_correct": true },
+      { "content": "object", "is_correct": false },
+      { "content": "symbol", "is_correct": true },
+      { "content": "bigint", "is_correct": true }
+    ],
+    "explanation": "JavaScript 的原始类型有 string、number、bigint、boolean、undefined、symbol、null；object 是引用类型。",
+    "difficulty": "medium",
+    "category": "前端开发",
+    "tags": ["JavaScript", "数据类型"]
+  },
+  {
+    "source_id": "fe-003",
+    "type": "true_false",
+    "title": "CSS 中 `display: flex` 的容器默认主轴方向为水平方向（row）。",
+    "options": [
+      { "content": "正确", "is_correct": true },
+      { "content": "错误", "is_correct": false }
+    ],
+    "explanation": "flex-direction 的默认值为 row，即主轴为水平方向，可通过 `flex-direction: column` 改为垂直。",
+    "difficulty": "easy",
+    "category": "前端开发",
+    "tags": ["CSS", "布局"]
+  },
+  {
+    "source_id": "fe-004",
+    "type": "fill_blank",
+    "title": "TypeScript 中，声明一个可选属性需在属性名后加 ____ 符号；声明只读属性使用 ____ 修饰符。",
+    "fill_answers": [["?", "？", "问号"], ["readonly"]],
+    "explanation": "例如 `interface User { name: string; age?: number; readonly id: number }`。",
+    "difficulty": "medium",
+    "category": "前端开发",
+    "tags": ["TypeScript"]
+  }
+]
